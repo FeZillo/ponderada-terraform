@@ -2,21 +2,6 @@
 
 Atividade baseada no tutorial oficial [Create infrastructure](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-create), da HashiCorp. O objetivo é utilizar Terraform para declarar e provisionar uma instância EC2 como Infraestrutura como Código (IaC).
 
-## É possível usar o sandbox em vez de uma conta AWS?
-
-**Sim.** O próprio tutorial disponibiliza um laboratório interativo gratuito. Nesse modo, não é necessário criar uma conta AWS pessoal, cadastrar cartão ou gerar credenciais IAM.
-
-O sandbox utiliza o provider oficial `hashicorp/aws`, mas redireciona as chamadas da API EC2 para o [LocalStack](https://www.localstack.cloud/) em `http://localhost:4566`.
-
-> Importante: o recurso criado é uma **simulação local da AWS**, executada dentro do laboratório temporário. A instância não aparece no console de uma conta AWS real e não gera cobrança. Portanto, as evidências deste trabalho comprovam o provisionamento no ambiente AWS simulado do tutorial, e não em uma conta pública da AWS.
-
-```mermaid
-flowchart LR
-    A["Código Terraform"] --> B["Provider AWS"]
-    B --> C["LocalStack :4566"]
-    C --> D["Instância EC2 simulada"]
-```
-
 ## Estrutura do repositório
 
 | Arquivo | Finalidade |
