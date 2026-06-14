@@ -167,15 +167,6 @@ terraform destroy
 
 No laboratório interativo, o ambiente é temporário e foi reinicializado quando a atividade avançou para o desafio seguinte. O estado da etapa anterior deixou de estar disponível. Em uma conta AWS real, nunca se deve depender desse comportamento: é necessário executar `terraform destroy` e confirmar a remoção dos recursos.
 
-## Execução em uma conta AWS real
-
-Este repositório está configurado para o sandbox. Para usar uma conta AWS real, é necessário remover de `main.tf`:
-
-- As credenciais fictícias `access_key` e `secret_key`.
-- O bloco `endpoints` apontando para `localhost:4566`.
-- As opções `skip_*` usadas pelo simulador.
-
-Depois, configure credenciais AWS válidas por um método seguro e adapte a AMI conforme a região escolhida. Credenciais reais nunca devem ser gravadas ou versionadas em arquivos `.tf`.
 
 ## Referências
 
